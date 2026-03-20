@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_netherite_netherthorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralwisp_wotw:netherite_mossthorn"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_crimson_recipe": {
+      "conditions": {
+        "recipe": "floralwisp_wotw:netherite_crimsonthorn"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_recipe": {
+      "conditions": {
+        "recipe": "floralwisp_wotw:netherite_warpedthorn"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_netherite_netherthorn",
+      "has_crimson_recipe",
+      "has_warped_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralwisp_wotw:netherite_crimsonthorn",
+      "floralwisp_wotw:netherite_warpedthorn"
+    ]
+  }
+}

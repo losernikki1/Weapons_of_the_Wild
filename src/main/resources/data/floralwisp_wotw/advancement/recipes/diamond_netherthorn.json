@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_netherthorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": "floralwisp_wotw:diamond_mossthorn"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_crimson_recipe": {
+      "conditions": {
+        "recipe": "floralwisp_wotw:diamond_crimsonthorn"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_warped_recipe": {
+      "conditions": {
+        "recipe": "floralwisp_wotw:diamond_warpedthorn"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_diamond_netherthorn",
+      "has_crimson_recipe",
+      "has_warped_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralwisp_wotw:diamond_crimsonthorn",
+      "floralwisp_wotw:diamond_warpedthorn"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "floralwisp_wotw:living_moss"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_spore_blosson": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:spore_blossom",
+              "minecraft:hanging_roots",
+              "minecraft:rooted_dirt",
+              "minecraft:moss_block",
+              "minecraft:small_dripleaf"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spore_blosson"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "floralwisp_wotw:living_moss"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "M": "#minecraft:iron_tool_materials",
+    "S": "minecraft:stick",
+    "L": "floralwisp_wotw:living_moss"
+  },
+  "pattern": [
+    " LM",
+    " SL",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "floralwisp_wotw:iron_mossthorn"
+  }
+}

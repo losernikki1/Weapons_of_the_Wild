@@ -19,6 +19,7 @@ public class CreativeTab {
             .icon(() -> new ItemStack(Items.COPPER_BLOCK))
             .title(Component.literal("Weapons of the Wild"))
             .displayItems((params, output) -> {
+                output.accept(MossThorns.LIVING_MOSS);
                 output.accept(MossThorns.WOODEN_MOSSTHORN);
                 output.accept(MossThorns.STONE_MOSSTHORN);
                 output.accept(MossThorns.COPPER_MOSSTHORN);

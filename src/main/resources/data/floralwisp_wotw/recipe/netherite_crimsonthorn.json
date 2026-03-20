@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": [
+    "floralwisp_wotw:netherite_mossthorn",
+    "floralwisp_wotw:netherite_netherthorn"
+  ],
+  "addition": "minecraft:crimson_nylium",
+  "result": {
+    "components": {
+      "!floralwisp_wotw:warped_variant": {}
+    },
+    "count": 1,
+    "id": "floralwisp_wotw:netherite_netherthorn"
+  }
+}
