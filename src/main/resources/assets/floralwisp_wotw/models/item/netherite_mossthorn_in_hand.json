@@ -1,0 +1,6 @@
+{
+  "parent": "floralwisp_wotw:item/mossthorn_in_hand",
+  "textures": {
+    "layer0": "floralwisp_wotw:item/netherite_mossthorn_in_hand"
+  }
+}
