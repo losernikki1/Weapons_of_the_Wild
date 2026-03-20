@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "floralwisp_wotw:wooden_mossthorn",
+    "floralwisp_wotw:stone_mossthorn",
+    "floralwisp_wotw:copper_mossthorn",
+    "floralwisp_wotw:iron_mossthorn",
+    "floralwisp_wotw:golden_mossthorn",
+    "floralwisp_wotw:netherite_mossthorn",
+    "floralwisp_wotw:diamond_mossthorn",
+    "floralwisp_wotw:golden_netherthorn",
+    "floralwisp_wotw:diamond_netherthorn",
+    "floralwisp_wotw:netherite_netherthorn"
+  ]
+}

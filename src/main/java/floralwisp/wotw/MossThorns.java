@@ -1,20 +1,13 @@
 package floralwisp.wotw;
 
-import net.minecraft.client.resources.sounds.Sound;
-import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.AttackRange;
-import net.minecraft.world.item.component.PiercingWeapon;
-import net.minecraft.world.item.component.SwingAnimation;
-
-import java.util.Optional;
 
 public class MossThorns {
-    public static void initialize() {}
+    public static void initialize() {
+        Floralwisp_wotw.LOGGER.info("Registering {} weapon type: 'Mossthorn'", Floralwisp_wotw.MOD_ID);
+    }
 
     public static AttackRange MOSSTHORN_ATTACK_RANGE = new AttackRange(0f,4.0f,0.0f,5.0f,0.3f,1.0f);
     public static Item.Properties MOSSTHORN_ITEM_PROPERTIES = new Item.Properties()
@@ -45,9 +38,19 @@ public class MossThorns {
             Item::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.GOLD, 2f, -2f)
     );
+    public static final Item GOLDEN_NETHERTHORN = Registerer.register(
+            "golden_netherthorn",
+            properties -> new NetherThorn(properties, "item.floralwisp_wotw.golden"),
+            MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.GOLD, 2f, -2f)
+    );
     public static final Item DIAMOND_MOSSTHORN = Registerer.register(
             "diamond_mossthorn",
             Item::new,
+            MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.DIAMOND, 2f, -2f)
+    );
+    public static final Item DIAMOND_NETHERTHORN = Registerer.register(
+            "diamond_netherthorn",
+            properties -> new NetherThorn(properties, "item.floralwisp_wotw.diamond"),
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.DIAMOND, 2f, -2f)
     );
     public static final Item NETHERITE_MOSSTHORN = Registerer.register(
@@ -55,5 +58,9 @@ public class MossThorns {
             Item::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.NETHERITE, 2f, -2f)
     );
-
+    public static final Item NETHERITE_NETHERTHORN = Registerer.register(
+            "netherite_netherthorn",
+            properties -> new NetherThorn(properties, "item.floralwisp_wotw.netherite"),
+            MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.NETHERITE, 2f, -2f)
+    );
 }

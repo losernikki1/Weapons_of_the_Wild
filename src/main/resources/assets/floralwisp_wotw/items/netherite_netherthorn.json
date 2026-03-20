@@ -1,0 +1,51 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:has_component",
+    "component": "floralwisp_wotw:warped_variant",
+    "on_false": {
+        "type": "minecraft:select",
+        "cases": [
+          {
+            "model": {
+              "type": "minecraft:model",
+              "model": "floralwisp_wotw:item/netherite_crimsonthorn"
+            },
+            "when": [
+              "gui",
+              "ground",
+              "fixed",
+              "on_shelf"
+            ]
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "floralwisp_wotw:item/netherite_crimsonthorn_in_hand"
+        },
+        "property": "minecraft:display_context"
+    },
+    "on_true": {
+        "type": "minecraft:select",
+        "cases": [
+          {
+            "model": {
+              "type": "minecraft:model",
+              "model": "floralwisp_wotw:item/netherite_warpedthorn"
+            },
+            "when": [
+              "gui",
+              "ground",
+              "fixed",
+              "on_shelf"
+            ]
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:model",
+          "model": "floralwisp_wotw:item/netherite_warpedthorn_in_hand"
+        },
+        "property": "minecraft:display_context"
+    }    
+  }
+}

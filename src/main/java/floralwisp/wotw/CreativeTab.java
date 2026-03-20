@@ -26,6 +26,18 @@ public class CreativeTab {
                 output.accept(MossThorns.GOLDEN_MOSSTHORN);
                 output.accept(MossThorns.DIAMOND_MOSSTHORN);
                 output.accept(MossThorns.NETHERITE_MOSSTHORN);
+                output.accept(MossThorns.GOLDEN_NETHERTHORN);
+                output.accept(MossThorns.DIAMOND_NETHERTHORN);
+                output.accept(MossThorns.NETHERITE_NETHERTHORN);
+                ItemStack GOLDEN_WARPEDTHORN = new ItemStack(MossThorns.GOLDEN_NETHERTHORN);
+                GOLDEN_WARPEDTHORN.set(ModComponents.WARPED_VARIANT_COMPONENT,true);
+                output.accept(GOLDEN_WARPEDTHORN);
+                ItemStack DIAMOND_WARPEDTHORN = new ItemStack(MossThorns.DIAMOND_NETHERTHORN);
+                DIAMOND_WARPEDTHORN.set(ModComponents.WARPED_VARIANT_COMPONENT,true);
+                output.accept(DIAMOND_WARPEDTHORN);
+                ItemStack NETHERITE_WARPEDTHORN = new ItemStack(MossThorns.NETHERITE_NETHERTHORN);
+                NETHERITE_WARPEDTHORN.set(ModComponents.WARPED_VARIANT_COMPONENT,true);
+                output.accept(NETHERITE_WARPEDTHORN);
             })
             .build();
 }
