@@ -16,36 +16,36 @@ public class CreativeTab {
     }
     public static final ResourceKey<CreativeModeTab> WOTW_CREATIVE_TAB_KEY = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(Floralwisp_wotw.MOD_ID, "creative_tab"));
     public static final CreativeModeTab WOTW_CREATIVE_TAB = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(Items.COPPER_BLOCK))
+            .icon(() -> new ItemStack(LushContent.STONE_MOSSTHORN))
             .title(Component.literal("Weapons of the Wild"))
             .displayItems((params, output) -> {
                 //BLOCKS
-                output.accept(MossThorns.ENTANGLING_ROOTS_ITEM);
-                output.accept(MossThorns.STRIPPED_ENTANGLING_ROOTS);
-                output.accept(MossThorns.MOSSY_ENTANGLING_ROOTS);
-                output.accept(MossThorns.MYCELIUM_ENTANGLING_ROOTS);
-                output.accept(MossThorns.CRIMSON_ENTANGLING_ROOTS);
-                output.accept(MossThorns.WARPED_ENTANGLING_ROOTS);
+                output.accept(LushContent.ENTANGLING_ROOTS_ITEM);
+                output.accept(LushContent.STRIPPED_ENTANGLING_ROOTS);
+                output.accept(LushContent.MOSSY_ENTANGLING_ROOTS);
+                output.accept(LushContent.MYCELIUM_ENTANGLING_ROOTS);
+                output.accept(LushContent.CRIMSON_ENTANGLING_ROOTS);
+                output.accept(LushContent.WARPED_ENTANGLING_ROOTS);
                 //ITEMS
-                output.accept(MossThorns.LIVING_MOSS);
-                output.accept(MossThorns.WOODEN_MOSSTHORN);
-                output.accept(MossThorns.STONE_MOSSTHORN);
-                output.accept(MossThorns.COPPER_MOSSTHORN);
-                output.accept(MossThorns.IRON_MOSSTHORN);
-                output.accept(MossThorns.GOLDEN_MOSSTHORN);
-                output.accept(MossThorns.DIAMOND_MOSSTHORN);
-                output.accept(MossThorns.NETHERITE_MOSSTHORN);
-                output.accept(MossThorns.GOLDEN_NETHERTHORN);
-                output.accept(MossThorns.DIAMOND_NETHERTHORN);
-                output.accept(MossThorns.NETHERITE_NETHERTHORN);
-                ItemStack GOLDEN_WARPEDTHORN = new ItemStack(MossThorns.GOLDEN_NETHERTHORN);
-                GOLDEN_WARPEDTHORN.set(ModComponents.WARPED_VARIANT_COMPONENT,true);
+                output.accept(LushContent.LIVING_MOSS);
+                output.accept(LushContent.WOODEN_MOSSTHORN);
+                output.accept(LushContent.STONE_MOSSTHORN);
+                output.accept(LushContent.COPPER_MOSSTHORN);
+                output.accept(LushContent.IRON_MOSSTHORN);
+                output.accept(LushContent.GOLDEN_MOSSTHORN);
+                output.accept(LushContent.DIAMOND_MOSSTHORN);
+                output.accept(LushContent.NETHERITE_MOSSTHORN);
+                output.accept(LushContent.GOLDEN_NETHERTHORN);
+                output.accept(LushContent.DIAMOND_NETHERTHORN);
+                output.accept(LushContent.NETHERITE_NETHERTHORN);
+                ItemStack GOLDEN_WARPEDTHORN = new ItemStack(LushContent.GOLDEN_NETHERTHORN);
+                GOLDEN_WARPEDTHORN.set(ItemComponents.WARPED_VARIANT_COMPONENT,true);
                 output.accept(GOLDEN_WARPEDTHORN);
-                ItemStack DIAMOND_WARPEDTHORN = new ItemStack(MossThorns.DIAMOND_NETHERTHORN);
-                DIAMOND_WARPEDTHORN.set(ModComponents.WARPED_VARIANT_COMPONENT,true);
+                ItemStack DIAMOND_WARPEDTHORN = new ItemStack(LushContent.DIAMOND_NETHERTHORN);
+                DIAMOND_WARPEDTHORN.set(ItemComponents.WARPED_VARIANT_COMPONENT,true);
                 output.accept(DIAMOND_WARPEDTHORN);
-                ItemStack NETHERITE_WARPEDTHORN = new ItemStack(MossThorns.NETHERITE_NETHERTHORN);
-                NETHERITE_WARPEDTHORN.set(ModComponents.WARPED_VARIANT_COMPONENT,true);
+                ItemStack NETHERITE_WARPEDTHORN = new ItemStack(LushContent.NETHERITE_NETHERTHORN);
+                NETHERITE_WARPEDTHORN.set(ItemComponents.WARPED_VARIANT_COMPONENT,true);
                 output.accept(NETHERITE_WARPEDTHORN);
             })
             .build();

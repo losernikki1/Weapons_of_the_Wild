@@ -1,9 +1,10 @@
 package floralwisp.wotw;
 
+import floralwisp.wotw.blocks.EntanglingRoots;
+import floralwisp.wotw.items.MossThorn;
+import floralwisp.wotw.items.NetherThorn;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
@@ -18,12 +19,10 @@ import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 
-public class MossThorns {
+public class LushContent {
     public static void initialize() {
         Floralwisp_wotw.LOGGER.info("Registering {} weapon type: 'Mossthorn'", Floralwisp_wotw.MOD_ID);
         BlockRenderLayerMap.putBlock(ENTANGLING_ROOTS, ChunkSectionLayer.CUTOUT);
@@ -54,27 +53,27 @@ public class MossThorns {
     public static final BlockItem STRIPPED_ENTANGLING_ROOTS = Registerer.registerBlockItem(
             "entangling_roots_stripped",
             ENTANGLING_ROOTS,
-            new Item.Properties().component(ModComponents.ROOT_VARIANT_COMPONENT,0)
+            new Item.Properties().component(ItemComponents.ROOT_VARIANT_COMPONENT,0)
     );
     public static final BlockItem MOSSY_ENTANGLING_ROOTS = Registerer.registerBlockItem(
             "entangling_roots_mossy",
             ENTANGLING_ROOTS,
-            new Item.Properties().component(ModComponents.ROOT_VARIANT_COMPONENT,1)
+            new Item.Properties().component(ItemComponents.ROOT_VARIANT_COMPONENT,1)
     );
     public static final BlockItem MYCELIUM_ENTANGLING_ROOTS = Registerer.registerBlockItem(
             "entangling_roots_mycelium",
             ENTANGLING_ROOTS,
-            new Item.Properties().component(ModComponents.ROOT_VARIANT_COMPONENT,2)
+            new Item.Properties().component(ItemComponents.ROOT_VARIANT_COMPONENT,2)
     );
     public static final BlockItem CRIMSON_ENTANGLING_ROOTS = Registerer.registerBlockItem(
             "entangling_roots_crimson",
             ENTANGLING_ROOTS,
-            new Item.Properties().component(ModComponents.ROOT_VARIANT_COMPONENT,3)
+            new Item.Properties().component(ItemComponents.ROOT_VARIANT_COMPONENT,3)
     );
     public static final BlockItem WARPED_ENTANGLING_ROOTS = Registerer.registerBlockItem(
             "entangling_roots_warped",
             ENTANGLING_ROOTS,
-            new Item.Properties().component(ModComponents.ROOT_VARIANT_COMPONENT,4)
+            new Item.Properties().component(ItemComponents.ROOT_VARIANT_COMPONENT,4)
     );
     //ITEMS
     public static AttackRange MOSSTHORN_ATTACK_RANGE = new AttackRange(0f,4.0f,0.0f,5.0f,0.3f,1.0f);
@@ -102,37 +101,37 @@ public class MossThorns {
     //Mossthorns
     public static final Item WOODEN_MOSSTHORN = Registerer.registerItem(
             "wooden_mossthorn",
-            Item::new,
+            MossThorn::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.WOOD,2f,-2f)
     );
     public static final Item STONE_MOSSTHORN = Registerer.registerItem(
             "stone_mossthorn",
-            Item::new,
+            MossThorn::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.STONE, 2f, -2f)
     );
     public static final Item COPPER_MOSSTHORN = Registerer.registerItem(
             "copper_mossthorn",
-            Item::new,
+            MossThorn::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.COPPER, 2f, -2f)
     );
     public static final Item IRON_MOSSTHORN = Registerer.registerItem(
             "iron_mossthorn",
-            Item::new,
+            MossThorn::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.IRON, 2f, -2f)
     );
     public static final Item GOLDEN_MOSSTHORN = Registerer.registerItem(
             "golden_mossthorn",
-            Item::new,
+            MossThorn::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.GOLD, 2f, -2f)
     );
     public static final Item DIAMOND_MOSSTHORN = Registerer.registerItem(
             "diamond_mossthorn",
-            Item::new,
+            MossThorn::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.DIAMOND, 2f, -2f)
     );
     public static final Item NETHERITE_MOSSTHORN = Registerer.registerItem(
             "netherite_mossthorn",
-            Item::new,
+            MossThorn::new,
             MOSSTHORN_ITEM_PROPERTIES.sword(ToolMaterial.NETHERITE, 2f, -2f)
     );
     //Netherthorns

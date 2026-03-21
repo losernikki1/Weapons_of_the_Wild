@@ -1,26 +1,20 @@
-package floralwisp.wotw;
+package floralwisp.wotw.blocks;
 
+import floralwisp.wotw.ItemComponents;
+import floralwisp.wotw.LushContent;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -47,7 +41,7 @@ public class EntanglingRoots extends WaterloggedTransparentBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
-        Integer variant = blockPlaceContext.getItemInHand().get(ModComponents.ROOT_VARIANT_COMPONENT);
+        Integer variant = blockPlaceContext.getItemInHand().get(ItemComponents.ROOT_VARIANT_COMPONENT);
         BlockState blockBelow = blockPlaceContext.getLevel().getBlockState(blockPlaceContext.getClickedPos().below());
         if (!blockBelow.isFaceSturdy(blockPlaceContext.getLevel(),blockPlaceContext.getClickedPos().below(), Direction.UP)) {
             return null;
@@ -74,19 +68,19 @@ public class EntanglingRoots extends WaterloggedTransparentBlock {
 
     @Override
     protected ItemStack getCloneItemStack(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean bl) {
-        return (new ItemStack(MossThorns.ENTANGLING_ROOTS_ITEM));
+        return (new ItemStack(LushContent.ENTANGLING_ROOTS_ITEM));
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(ROOT_TYPE);
         super.createBlockStateDefinition(builder);
+        builder.add(ROOT_TYPE);
     }
 
     @Override
     protected void entityInside(BlockState blockState, Level level, BlockPos blockPos, Entity entity, InsideBlockEffectApplier insideBlockEffectApplier, boolean bl) {
         Vec3 vec3 = new Vec3(0.15, 0.05F, 0.15);
-        if (entity instanceof LivingEntity livingEntity && livingEntity.getMainHandItem().is(MossThorns.MOSSTHORN_TAG)) {
+        if (entity instanceof LivingEntity livingEntity && livingEntity.getMainHandItem().is(LushContent.MOSSTHORN_TAG)) {
             return;
         }
         entity.makeStuckInBlock(blockState, vec3);

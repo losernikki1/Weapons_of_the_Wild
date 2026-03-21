@@ -14,7 +14,7 @@ import java.util.function.Function;
 
 public class Registerer {
     public static void initialize() {
-        MossThorns.initialize();
+        LushContent.initialize();
         CreativeTab.initialize();
     }
 

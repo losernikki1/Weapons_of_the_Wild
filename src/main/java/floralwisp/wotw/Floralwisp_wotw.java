@@ -15,6 +15,6 @@ public class Floralwisp_wotw implements ModInitializer {
 		// Proceed with mild caution.
 
 		Registerer.initialize();
-		ModComponents.initialize();
+		ItemComponents.initialize();
 	}
 }

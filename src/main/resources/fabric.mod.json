@@ -3,15 +3,15 @@
 	"id": "floralwisp_wotw",
 	"version": "${version}",
 	"name": "floralwisp_wotw",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Biome-Fantasy themed weapons mod! :D",
 	"authors": [
-		"Me!"
+		"FloralWisp"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/losernikki1/Weapons_of_the_Wild"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/floralwisp_wotw/icon.png",
 	"environment": "*",
 	"entrypoints": {

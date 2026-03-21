@@ -6,7 +6,7 @@ import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 
-public class ModComponents {
+public class ItemComponents {
     protected static void initialize() {
         Floralwisp_wotw.LOGGER.info("Registering {} components", Floralwisp_wotw.MOD_ID);
     }
