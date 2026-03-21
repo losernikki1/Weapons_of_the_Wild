@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "floralwisp_wotw:block/crimson_entangling_roots"
+  }
+}

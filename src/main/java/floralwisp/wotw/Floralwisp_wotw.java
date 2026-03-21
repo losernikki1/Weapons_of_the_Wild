@@ -1,13 +1,8 @@
 package floralwisp.wotw;
 
 import net.fabricmc.api.ModInitializer;
-
-import net.minecraft.client.renderer.item.properties.conditional.ConditionalItemModelProperties;
-import net.minecraft.core.registries.Registries;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.rmi.registry.Registry;
 
 public class Floralwisp_wotw implements ModInitializer {
 	public static final String MOD_ID = "floralwisp_wotw";

@@ -19,6 +19,14 @@ public class CreativeTab {
             .icon(() -> new ItemStack(Items.COPPER_BLOCK))
             .title(Component.literal("Weapons of the Wild"))
             .displayItems((params, output) -> {
+                //BLOCKS
+                output.accept(MossThorns.ENTANGLING_ROOTS_ITEM);
+                output.accept(MossThorns.STRIPPED_ENTANGLING_ROOTS);
+                output.accept(MossThorns.MOSSY_ENTANGLING_ROOTS);
+                output.accept(MossThorns.MYCELIUM_ENTANGLING_ROOTS);
+                output.accept(MossThorns.CRIMSON_ENTANGLING_ROOTS);
+                output.accept(MossThorns.WARPED_ENTANGLING_ROOTS);
+                //ITEMS
                 output.accept(MossThorns.LIVING_MOSS);
                 output.accept(MossThorns.WOODEN_MOSSTHORN);
                 output.accept(MossThorns.STONE_MOSSTHORN);

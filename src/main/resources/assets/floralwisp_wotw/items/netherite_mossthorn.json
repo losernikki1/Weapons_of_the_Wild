@@ -5,7 +5,7 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "floralwisp_wotw:item/netherite_mossthorn"
+          "model": "floralwisp_wotw:item/mossthorn/netherite_mossthorn"
         },
         "when": [
           "gui",
@@ -17,7 +17,7 @@
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "floralwisp_wotw:item/netherite_mossthorn_in_hand"
+      "model": "floralwisp_wotw:item/mossthorn/netherite_mossthorn_in_hand"
     },
     "property": "minecraft:display_context"
   }

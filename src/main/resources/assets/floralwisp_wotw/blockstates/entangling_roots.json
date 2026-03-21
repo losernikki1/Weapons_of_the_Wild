@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "root_type=0": {
+      "model": "floralwisp_wotw:block/entangling_roots"
+    },
+    "root_type=1": {
+      "model": "floralwisp_wotw:block/moss_entangling_roots"
+    },
+    "root_type=2": {
+      "model": "floralwisp_wotw:block/mycelium_entangling_roots"
+    },
+    "root_type=3": {
+      "model": "floralwisp_wotw:block/crimson_entangling_roots"
+    },
+    "root_type=4": {
+      "model": "floralwisp_wotw:block/warped_entangling_roots"
+    }
+  }
+}

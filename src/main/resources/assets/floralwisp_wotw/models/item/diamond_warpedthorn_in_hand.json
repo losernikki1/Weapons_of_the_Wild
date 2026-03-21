@@ -1,6 +1,0 @@
-{
-  "parent": "floralwisp_wotw:item/mossthorn_in_hand",
-  "textures": {
-    "layer0": "floralwisp_wotw:item/diamond_warpedthorn_in_hand"
-  }
-}

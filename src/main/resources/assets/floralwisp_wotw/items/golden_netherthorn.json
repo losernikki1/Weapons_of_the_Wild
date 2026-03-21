@@ -9,7 +9,7 @@
           {
             "model": {
               "type": "minecraft:model",
-              "model": "floralwisp_wotw:item/golden_crimsonthorn"
+              "model": "floralwisp_wotw:item/mossthorn/golden_crimsonthorn"
             },
             "when": [
               "gui",
@@ -21,7 +21,7 @@
         ],
         "fallback": {
           "type": "minecraft:model",
-          "model": "floralwisp_wotw:item/golden_crimsonthorn_in_hand"
+          "model": "floralwisp_wotw:item/mossthorn/golden_crimsonthorn_in_hand"
         },
         "property": "minecraft:display_context"
     },
@@ -31,7 +31,7 @@
           {
             "model": {
               "type": "minecraft:model",
-              "model": "floralwisp_wotw:item/golden_warpedthorn"
+              "model": "floralwisp_wotw:item/mossthorn/golden_warpedthorn"
             },
             "when": [
               "gui",
@@ -43,7 +43,7 @@
         ],
         "fallback": {
           "type": "minecraft:model",
-          "model": "floralwisp_wotw:item/golden_warpedthorn_in_hand"
+          "model": "floralwisp_wotw:item/mossthorn/golden_warpedthorn_in_hand"
         },
         "property": "minecraft:display_context"
     }    

@@ -16,5 +16,11 @@ public class ModComponents {
             Identifier.fromNamespaceAndPath(Floralwisp_wotw.MOD_ID, "warped_variant"),
             DataComponentType.<Boolean>builder().persistent(Codec.BOOL).build()
     );
+
+    public static final DataComponentType<Integer> ROOT_VARIANT_COMPONENT = Registry.register(
+            BuiltInRegistries.DATA_COMPONENT_TYPE,
+            Identifier.fromNamespaceAndPath(Floralwisp_wotw.MOD_ID, "root_variant"),
+            DataComponentType.<Integer>builder().persistent(Codec.INT).build()
+    );
 }
 

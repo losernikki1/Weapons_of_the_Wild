@@ -5,7 +5,7 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "floralwisp_wotw:item/diamond_mossthorn"
+          "model": "floralwisp_wotw:item/mossthorn/diamond_mossthorn"
         },
         "when": [
           "gui",
@@ -17,7 +17,7 @@
     ],
     "fallback": {
       "type": "minecraft:model",
-      "model": "floralwisp_wotw:item/diamond_mossthorn_in_hand"
+      "model": "floralwisp_wotw:item/mossthorn/diamond_mossthorn_in_hand"
     },
     "property": "minecraft:display_context"
   }
