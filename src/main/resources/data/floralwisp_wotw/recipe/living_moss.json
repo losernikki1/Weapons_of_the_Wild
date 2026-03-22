@@ -7,13 +7,12 @@
       "minecraft:hanging_roots",
       "minecraft:rooted_dirt"
     ],
-    "M": "minecraft:moss_block",
-    "D": "minecraft:small_dripleaf"
+    "D": "minecraft:big_dripleaf"
   },
   "pattern": [
-    "DDD",
+    "DRD",
     "RSR",
-    "MRM"
+    "DRD"
   ],
   "result": {
     "count": 1,

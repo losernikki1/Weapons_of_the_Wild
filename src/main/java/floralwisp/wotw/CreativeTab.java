@@ -16,7 +16,7 @@ public class CreativeTab {
     }
     public static final ResourceKey<CreativeModeTab> WOTW_CREATIVE_TAB_KEY = ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), Identifier.fromNamespaceAndPath(Floralwisp_wotw.MOD_ID, "creative_tab"));
     public static final CreativeModeTab WOTW_CREATIVE_TAB = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(LushContent.STONE_MOSSTHORN))
+            .icon(() -> new ItemStack(LushContent.ENTANGLING_ROOTS_ITEM))
             .title(Component.literal("Weapons of the Wild"))
             .displayItems((params, output) -> {
                 //BLOCKS
