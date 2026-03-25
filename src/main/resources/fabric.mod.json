@@ -3,12 +3,12 @@
 	"id": "floralwisp_wotw",
 	"version": "${version}",
 	"name": "floralwisp_wotw",
-	"description": "Biome-Fantasy themed weapons mod! :D",
+	"description": "Adds fantasy/biome-themed weapons! :D",
 	"authors": [
 		"FloralWisp"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://modrinth.com/mod/weapons-of-the-wild",
 		"sources": "https://github.com/losernikki1/Weapons_of_the_Wild"
 	},
 	"license": "MIT",

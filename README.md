@@ -1,0 +1,1 @@
+Weapons of the wilds aims to add a bunch of new and unique weapons types, each one having its own mechanic/gimmick.
