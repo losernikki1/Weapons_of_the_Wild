@@ -5,6 +5,7 @@ import floralwisp.wotw.blocks.EntanglingRoots;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -20,6 +21,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -61,9 +63,26 @@ public class MossThorn extends Item {
                                 : LushContent.ENTANGLING_ROOTS.defaultBlockState().setValue(EntanglingRoots.ROOT_TYPE, 1),
                         Block.UPDATE_ALL
                 );
+                ParticleOptions rootSpawnParticles = new BlockParticleOption(ParticleTypes.BLOCK, Blocks.BROWN_MUSHROOM_BLOCK.defaultBlockState());
+                if (rootState != null) {
+                    switch (rootState.getValue(EntanglingRoots.ROOT_TYPE)) {
+                        case 1:
+                            rootSpawnParticles = new BlockParticleOption(ParticleTypes.BLOCK, Blocks.MOSS_BLOCK.defaultBlockState());
+                            break;
+                        case 2:
+                            rootSpawnParticles = new BlockParticleOption(ParticleTypes.BLOCK, Blocks.MYCELIUM.defaultBlockState());
+                            break;
+                        case 3:
+                            rootSpawnParticles = new BlockParticleOption(ParticleTypes.BLOCK, Blocks.NETHER_WART_BLOCK.defaultBlockState());
+                            break;
+                        case 4:
+                            rootSpawnParticles = new  BlockParticleOption(ParticleTypes.BLOCK, Blocks.WARPED_WART_BLOCK.defaultBlockState());
+                            break;
+                    }
+                };
                 if (targetLevel instanceof ServerLevel serverLevel) {
                     serverLevel.sendParticles(
-                            new BlockParticleOption(ParticleTypes.BLOCK, Blocks.MOSS_BLOCK.defaultBlockState()),
+                            rootSpawnParticles,
                             targetEntity.getX(), targetEntity.getY(), targetEntity.getZ(),
                             20, 0.5, 0.0, 0.5, 1);
                 }
@@ -108,7 +127,6 @@ public class MossThorn extends Item {
                 }
                 targetLevel.setBlock(targetPosition.below(), Blocks.MOSS_BLOCK.defaultBlockState(), Block.UPDATE_ALL);
                 BoneMealItem.growCrop(new ItemStack(Items.MOSS_BLOCK), targetLevel, targetPosition.below());
-                ((Player) sourceEntity).displayClientMessage(Component.literal("placed moss beneath"),false);
                 if (targetLevel instanceof ServerLevel serverLevel) {
                     serverLevel.sendParticles(
                             ParticleTypes.HAPPY_VILLAGER,
